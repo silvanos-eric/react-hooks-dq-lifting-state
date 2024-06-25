@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import DarkModeWrapper from "./DarkModeWrapper";
 import Header from "./Header";
 import TweetsContainer from "./TweetsContainer";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(mostRecentDarkModeValue => !mostRecentDarkModeValue)
-  }
-
   return (
-    <DarkModeWrapper darkMode={darkMode}>
-      <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+    <DarkModeWrapper darkMode={false}>
+      <Header />
       <TweetsContainer />
     </DarkModeWrapper>
   );
