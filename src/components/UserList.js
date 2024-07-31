@@ -1,10 +1,10 @@
 import React from "react";
 import UserCard from "./UserCard";
 
-function UserList({ userListData, setCurrentUser }) {
+function UserList({ userList, setCurrentUser }) {
   return (
     <div className="ui cards">
-      {userListData.map((user, index) => (
+      {userList.map((user, index) => (
         <UserCard
           key={user.id}
           handleUserClick={() => setCurrentUser(index)}
